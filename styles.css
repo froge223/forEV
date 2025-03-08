@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+#congratButton {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#congratButton:hover {
+    background-color: #ff4a3d;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px; /* Увеличили размер текста */
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart-image {
+    width: 150px; /* Увеличили размер картинки */
+    margin-top: 20px;
+}
