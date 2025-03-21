@@ -4,8 +4,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Marck Script', cursive;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
 }
 
 #congratButton {
@@ -14,27 +19,43 @@ body {
     background-color: #ff6f61;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #congratButton:hover {
     background-color: #ff4a3d;
+    transform: scale(1.05);
 }
 
 #message {
     text-align: center;
     margin-top: 20px;
-    font-size: 32px; /* Увеличили размер текста */
+    font-size: 32px;
     color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.hidden {
-    display: none;
+#message.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .heart-image {
-    width: 150px; /* Увеличили размер картинки */
-    margin-top: 20px;
+    width: 300px; /* Увеличили размер картинки */
+    margin-top: 30px; /* Отступ сверху */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
